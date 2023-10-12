@@ -108,6 +108,6 @@ export default {
 
 .header__search-input:focus {
   outline: none;
-  color: $text;
+  color: $text !important;
 }
 </style>
