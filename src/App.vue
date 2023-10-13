@@ -1,8 +1,6 @@
 <template>
   <HeaderContainer />
-  <div class="wrapper">
-    <PartnersContainer />
-  </div>
+  <PartnersContainer />
 </template>
 
 <script>
@@ -18,9 +16,4 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-.wrapper {
-  padding: 0 20px;
-  margin: 0;
-}
-</style>
+<style scoped lang="scss"></style>

@@ -38,21 +38,31 @@ export default {
 @import '../assets/layouts/index.scss';
 
 .partners {
+    display: flex;
+
     @media (max-width: 375px) {
-        display: flex;
         flex-direction: column;
     }
+
+    @media (min-width: 375px) and (max-width: 768px) {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
 
     &__title {
         font-weight: 500;
         color: $text !important;
         text-transform: uppercase;
         line-height: 160%;
+        margin-bottom: 30px;
+        font-size: 28px;
+        padding-left: 20px;
 
-        @media (max-width: 375px) {
-            font-size: 28px;
-            margin-bottom: 30px;
+        @media (min-width: 375px) and (max-width: 768px) {
+            width: 100%;
         }
+
     }
 
     &__logo {
@@ -62,14 +72,25 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 285px;
-        height: 90px;
+
 
         @media (max-width: 375px) {
-            margin-bottom: 20px;
+
             padding: 25px;
             max-width: 335px;
             max-height: 140px;
+            width: 285px;
+            height: 90px;
+            margin: 0 20px 20px 20px;
+        }
+
+        @media (min-width: 375px) and (max-width: 768px) {
+            margin: 0 0 20px 20px;
+            padding: 15px;
+            max-width: 229px;
+            max-height: 120px;
+            width: 199px;
+            height: 90px;
         }
 
         &-image {
@@ -77,14 +98,5 @@ export default {
             max-height: 100%;
         }
     }
-}
-
-
-.partners__content {
-    @media (max-width: 375px) {
-        width: 100%;
-        max-width: 375px;
-    }
-
 }
 </style>

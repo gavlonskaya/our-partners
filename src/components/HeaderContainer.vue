@@ -38,6 +38,11 @@ export default {
     margin-bottom: 71px;
   }
 
+  @media (min-width: 375px) and (max-width: 768px) {
+    margin-bottom: 70px;
+  }
+
+
   &__content {
     @media (max-width: 375px) {
       padding: 16px 20px;
