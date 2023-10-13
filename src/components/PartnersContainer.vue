@@ -40,13 +40,19 @@ export default {
 .partners {
     display: flex;
 
-    @media (max-width: 375px) {
+    @media (max-width: 376px) {
         flex-direction: column;
     }
 
-    @media (min-width: 375px) and (max-width: 768px) {
+    @media (min-width: 376px) and (max-width: 769px) {
         flex-wrap: wrap;
         flex-direction: row;
+    }
+
+    @media (min-width: 768px) {
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 0 100px 0 100px;
     }
 
 
@@ -59,8 +65,14 @@ export default {
         font-size: 28px;
         padding-left: 20px;
 
-        @media (min-width: 375px) and (max-width: 768px) {
+        @media (min-width: 376px) {
             width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            width: 100%;
+            font-size: 36px;
+            padding-left: 30px;
         }
 
     }
@@ -74,7 +86,7 @@ export default {
         align-items: center;
 
 
-        @media (max-width: 375px) {
+        @media (max-width: 376px) {
 
             padding: 25px;
             max-width: 335px;
@@ -84,13 +96,28 @@ export default {
             margin: 0 20px 20px 20px;
         }
 
-        @media (min-width: 375px) and (max-width: 768px) {
+        @media (min-width: 376px) and (max-width: 769px) {
             margin: 0 0 20px 20px;
             padding: 15px;
             max-width: 229px;
             max-height: 120px;
             width: 199px;
             height: 90px;
+        }
+
+        @media (min-width: 769px) {
+
+            padding: 28px 26.5px 28px 27px;
+            max-width: 287.5px;
+            max-height: 120px;
+            width: 234px;
+            height: 64px;
+            margin: 0 0 30px 30px;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 0px 0px 10px 0px rgba(164, 164, 164, 0.03), -3px 0px 40px 0px rgba(0, 0, 0, 0.10);
+            }
         }
 
         &-image {

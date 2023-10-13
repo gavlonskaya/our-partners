@@ -32,19 +32,23 @@ export default {
 .header {
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.05);
 
-  @media (max-width: 375px) {
+  @media (max-width: 376px) {
     display: flex;
     flex-direction: column;
     margin-bottom: 71px;
   }
 
-  @media (min-width: 375px) and (max-width: 768px) {
+  @media (min-width: 376px) and (max-width: 769px) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: 769px) {
     margin-bottom: 70px;
   }
 
 
   &__content {
-    @media (max-width: 375px) {
+    @media (max-width: 376px) {
       padding: 16px 20px;
       display: flex;
       justify-content: space-between;
@@ -53,14 +57,14 @@ export default {
   }
 
   &__logo {
-    @media (max-width: 375px) {
+    @media (max-width: 376px) {
       width: 135px;
       height: auto;
     }
   }
 
   &__account {
-    @media (max-width: 375px) {
+    @media (max-width: 376px) {
       width: 24px;
       height: auto;
     }
@@ -82,7 +86,7 @@ export default {
       opacity: 0.5;
       color: $text !important;
 
-      @media (max-width: 375px) {
+      @media (max-width: 376px) {
         width: 100%;
       }
 
