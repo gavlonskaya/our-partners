@@ -9,11 +9,9 @@
       </div>
     </div>
     <div class="header__search">
-      <div class="header__search-icon">
-        <button class="search-icon__button">
-          <img src="../assets/images/search.svg" alt="search" class="search-icon__image">
-        </button>
-      </div>
+      <button class="header__search-button">
+        <img src="../assets/images/search.svg" alt="search">
+      </button>
       <input type="text" class="header__search-input" placeholder="Найти...">
     </div>
   </div>
@@ -39,75 +37,69 @@ export default {
     flex-direction: column;
     margin-bottom: 71px;
   }
-}
 
-.header__content {
-  @media (max-width: 375px) {
-    padding: 16px 20px;
+  &__content {
+    @media (max-width: 375px) {
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    @media (max-width: 375px) {
+      width: 135px;
+      height: auto;
+    }
+  }
+
+  &__account {
+    @media (max-width: 375px) {
+      width: 24px;
+      height: auto;
+    }
+  }
+
+  &__search {
+    padding: 8px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    border-top: 1px solid $light-grey;
+    opacity: 0.5;
+
+    &-input {
+      letter-spacing: 0.14px;
+      color: $light-grey;
+      font-size: 14px;
+      border: none;
+      font-weight: 400;
+      opacity: 0.5;
+      color: $text !important;
+
+      @media (max-width: 375px) {
+        width: 100%;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      margin-right: 5px;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
-}
-
-.header__logo {
-  @media (max-width: 375px) {
-    width: 135px;
-    height: auto;
-  }
-}
-
-.header__account {
-  @media (max-width: 375px) {
-    width: 24px;
-    height: auto;
-  }
-}
-
-
-.header__search {
-  padding: 8px 20px;
-  display: flex;
-  align-items: center;
-  border-top: 1px solid $light-grey;
-  opacity: 0.5;
-}
-
-.search-icon__button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-.search-icon__button:hover .search-icon__image {
-  transform: scale(1.1);
-}
-
-.header__search-icon img {
-  @media (max-width: 375px) {
-    width: 24px;
-    height: 24px;
-    margin-right: 5px;
-    transition: transform 0.2s;
-  }
-}
-
-.header__search-input {
-  letter-spacing: 0.14px;
-  color: $light-grey;
-  font-size: 14px;
-  border: none;
-  font-weight: 400;
-  opacity: 0.5;
-
-  @media (max-width: 375px) {
-    width: 100%;
-  }
-}
-
-.header__search-input:focus {
-  outline: none;
-  color: $text !important;
 }
 </style>
